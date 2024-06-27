@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const fetchPokemon = async () => {
       try {
-        const response = await fetch(`https://backend-l768ufhgx-nomekumas-projects.vercel.app/pokemon/${pokemonName}`);
+        const response = await fetch(`https://backend-two-kappa-79.vercel.app/pokemon/${pokemonName}`);
         const data = await response.json();
         setPokemon(data[0]);
       } catch (err) {
