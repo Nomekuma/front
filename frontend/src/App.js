@@ -27,7 +27,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPokemonName(e.target.elements[0].value);
+    setPokemonName(e.target.elements[0].value.toLowerCase());
   };
 
   return (
