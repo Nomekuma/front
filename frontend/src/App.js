@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const fetchPokemon = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/${pokemonName}`);
+        const response = await fetch(`http://localhost:8080/pokemon/${pokemonName}`);
         const data = await response.json();
         setPokemon(data[0]);
       } catch (err) {
@@ -29,7 +29,6 @@ function App() {
         <button type="submit">Search</button>
       </form>
       {pokemon.name && <h1>{pokemon.name}</h1>}
-      {pokemon.weight && <h1>{pokemon.weight}</h1>}
       {pokemon.sprites && <img src={pokemon.sprites} alt={pokemon.name} />}
     </div>
   );
